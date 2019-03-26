@@ -1,0 +1,13 @@
+{
+    "name": "$name",
+    "age": "$age",
+    "dividend": {"$numberDecimal": {"fixed": 3}},
+    "emails": {"$array": {"of": "$email", "number": 3}},
+    "orders": {"$array": {"of": {
+        "sku": {"$number": {"min": 1, "max": 7}},
+        "price": {"$numberDecimal": {"fixed": 3}},
+        "qty": {"$numberLong": {"min": 1, "max": 9}},
+        "date": {"$date": {"min": "2015-01-01", "max": "2019-03-15T23:59:59.999Z"}}
+      }, "number": 7}}
+
+  }
