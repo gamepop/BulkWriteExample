@@ -7,4 +7,11 @@ Before running this program, generate sample customer collection using mgenerate
 ```javascript
 mgeneratejs -n 1000000 customertemplate.json | mongoimport --host MongoServer:27017 --ssl --username <username> --password <Password> --authenticationDatabase admin --db test --collection customers --type json
 ```
+###App.java
+
+Update MongoDB Atlas or Local Cluster connection String
+```java
+String uri = "mongodb+srv://<username>:<password>@<Atlas Cluster>/test?retryWrites=true&w=majority";
+```
+
 
